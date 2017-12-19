@@ -1,0 +1,4 @@
+cece est un fichier test
+avec plusieurs lignes
+et plusieurs mots
+merci

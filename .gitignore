@@ -1,0 +1,10 @@
+.setting/
+.project
+.classpath
+.metadata
+.recommenders
+RemoteSystemsTemplateFiles
+*/bin/
+*/.settings/
+Servers/
+*.class
