@@ -1,5 +1,11 @@
 package beans;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import database.MaBase;
+
 public class Personne {
 
 	private String nom;
@@ -32,9 +38,23 @@ public class Personne {
 
 	@Override
 	public String toString() {
-	return "Personne [nom=" + nom + ", prenom=" +prenom + ", sexe=" + (sexe=='f' ? "femme" : "homme" ) + "]";
+		return "Personne [nom=" + nom + ", prenom=" + prenom + ", sexe=" + (sexe == 'f' ? "femme" : "homme") + "]";
 	}
 
+	public void AddPersonne() {
 
-	
+		Connection c = MaBase.LoadDatabase();
+
+		try {
+			Statement st = c.createStatement();
+			String chaineEnvoi = "INSERT INTO personne (nom,prenom) VALUES (\"" + this.nom + "\", \"" + this.prenom+ "\");";
+			st.executeUpdate(chaineEnvoi);
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
 }

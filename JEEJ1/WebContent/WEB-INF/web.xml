@@ -6,7 +6,7 @@
 	<display-name>JEEJ1</display-name>
 	<servlet>
 		<servlet-name>TestServlet</servlet-name>
-		<servlet-class>Servlets.TestServlet</servlet-class>
+		<servlet-class>servlets.TestServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>TestServlet</servlet-name>

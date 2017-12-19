@@ -89,6 +89,12 @@ public class TestServlet extends HttpServlet {
 			}
 
 		}
+		Personne p = new Personne();
+		p.setNom(nom);
+		p.setPrenom(prenom);
+		p.setSexe('H');
+		p.AddPersonne();
+		
 		request.setAttribute("messageEnvoye", message);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/vue.jsp").forward(request, response);
 	}
